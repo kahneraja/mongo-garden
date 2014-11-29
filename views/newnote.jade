@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-4
+      .col-md-4
+        h1 New note
+        form(action="newnote", method="post")
+          .input-group
+            span.input-group-addon @
+            input(name="name").form-control(placeholder="name")
+          br
+          .input-group
+            span.input-group-addon @
+            input(name="project").form-control(placeholder="project")
+          br
+          .input-group
+            span.input-group-addon @
+            input(name="blockers").form-control(placeholder="blockers")            
+          br
+          .input-group
+            button.btn.btn-primary(type="submit") Submit
