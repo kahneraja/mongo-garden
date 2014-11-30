@@ -1,4 +1,14 @@
 extends layout
 
 block content
-  h1 HOME!
+  .container
+    .row
+      .col-md-4
+      .col-md-4
+        h1 HOME!
+    .row
+      .col-md-4
+      .col-md-4
+        ul.list-group
+          each note in notes
+            li.list-group-item= note.name

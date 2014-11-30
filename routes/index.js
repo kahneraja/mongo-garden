@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  return standupCtrl.list(req, res);
 });
 
 router.get('/newnote', function(req,res){
